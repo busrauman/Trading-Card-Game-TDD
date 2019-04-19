@@ -13,8 +13,10 @@ public class App
     {
     	GameLogic game = new GameLogic();
     	Player player = game.preparePlayer();
-    	game.gameWith2Players(player, player);
+    	Player player2 = game.preparePlayer();
+    	game.gameWith2Players(player, player2);
     	player.withHand(5,6,8);
-    	game.lungeStrategy();
+    	player2.withHand(0,4,5);
+    	game.dropCard();
     }
 }

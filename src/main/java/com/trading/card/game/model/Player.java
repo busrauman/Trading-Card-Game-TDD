@@ -79,7 +79,9 @@ public class Player {
 	public int numberOfHand() {
 		return this.hand.size();
 	}
-
+	
+	
+// FIXME Some methods have to move to Game Logic Class this code really bad smell :S
 	public void withHand(int... cards) {
 		this.hand = IntStream.of(cards).boxed().collect(Collectors.toList());
 		this.hand.stream().filter(han -> this.deck.contains(han)).forEach(x -> {
